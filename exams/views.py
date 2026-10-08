@@ -47,3 +47,9 @@ def submit_exam(request, exam_id):
         "message": "Exam Submitted",
         "score": score
     })
+
+@api_view(['GET'])
+def welcome(request):
+    return Response({
+        "message": "Welcome to the Assessment Application"
+    })
