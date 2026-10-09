@@ -6,4 +6,5 @@ urlpatterns = [
     path('questions/<int:exam_id>/', get_questions),
     path('submit/<int:exam_id>/', submit_exam),
     path('welcome/', welcome),
+    path('health/', health_check),
 ]

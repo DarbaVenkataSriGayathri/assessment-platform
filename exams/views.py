@@ -52,4 +52,11 @@ def submit_exam(request, exam_id):
 def welcome(request):
     return Response({
         "message": "Welcome to the Assessment Application"
+        
+    })
+@api_view(['GET'])
+def health_check(request):
+    return Response({
+        "status": "success",
+        "message": "Assessment API is running"
     })
