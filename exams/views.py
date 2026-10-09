@@ -60,3 +60,10 @@ def health_check(request):
         "status": "success",
         "message": "Assessment API is running"
     })
+@api_view(['GET'])
+def get_exam_count(request):
+    total_exams=Exam.objects.count()
+
+    return response({
+        "total_exams":total_exams
+    })
